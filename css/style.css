@@ -12,8 +12,8 @@ body {
     margin: 0 auto;
     grid-template-columns: 10% auto auto 10%;
     grid-template-rows: auto auto auto 1fr auto;
-    grid-template-areas: "hero  hero    hero    hero"
-                         "next  next    next    next"
+    grid-template-areas: "hero          hero          hero         hero"
+                         "tech-content  tech-content  tech-content tech-content"
                          ". .   .   ."
                          ". .   .   ."
                          ". .   .   .";
@@ -48,7 +48,7 @@ header nav {
     width: 100%;
     height: 50px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125em;
     text-shadow: 0px 2px 4px #000000;
     display: grid;
     grid-template-columns: auto auto;
@@ -123,21 +123,19 @@ header nav ul > li.btn-outline:hover > a {
     margin-top: 13.6%;
     margin-left: 10%;
     font-family: Lato-Black;
-    font-size: 110px;
+    font-size: 6.875em;
     color: #ffffff;
     letter-spacing: 3.29px;
     text-shadow: 0px 2px 4px #4A4A4A;
 }
 
 .hero-content a {
-    font-family: Lato-Bold;
-    font-size: 16px;
+    font-weight: bold;
     color: #ffffff;
 }
 
 .hero-content a.btn {
-    font-family: Lato-Regular;
-    font-size: 16px;
+    font-weight: normal;
     margin-left: 10%;
     background: #4BC11B;
     padding: 10px 100px;
@@ -146,8 +144,8 @@ header nav ul > li.btn-outline:hover > a {
 }
 
 .hero-content p {
-    font-family: Lato-Regular;
-    font-size: 20px;
+    font-weight: normal;
+    font-size: 1.25em;
     color: #ffffff;
     margin-top: 5%;
     margin-left: 10%;
@@ -155,9 +153,41 @@ header nav ul > li.btn-outline:hover > a {
     text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
 }
 
-/* Next Section */
-
-.next {
-    grid-area: next;
+.hero-content .learn-more {
+    display: flex;
+    justify-content: center;
+    margin: 14% auto 0 auto;
+    width: 92px;
 }
 
+.hero-content .learn-more p {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.hero-content .learn-more img {
+    position: absolute;
+    margin: 2.7% auto 0 auto;
+}
+
+/* Technologies Section */
+
+.tech-content {
+    grid-area: tech-content;
+    width: 100%;
+    height: 712px;
+    position: absolute;
+    text-align: center;
+}
+
+.tech-content h1{
+    font-weight: normal;
+    font-size: 3em;
+    color: #505050;
+    margin: 9% auto 0 auto;
+}
+
+.tech-content .icon-row {
+    display:inline-block;
+    vertical-align: top;
+}
