@@ -13,7 +13,8 @@ body {
     grid-template-areas: "hero"
                          "tech"
                          "afford"
-                         "pro";
+                         "pro"
+                         "main-footer";
     height: 100vh;
 }
 
@@ -69,14 +70,13 @@ header nav ul > li > a {
 header nav ul > li.btn-outline {
     width: 10%;
     margin-top: 0.4%;
-    padding: 10px 15px 10px 15px;
+    padding: 11px 15px 10px 15px;
     border: 2px solid #ffffff;
     box-shadow: 0px 2px 0px 0px rgba(73,73,73,0.50);
     border-radius: 4px;
     text-align: center;
     vertical-align: middle;
     float: right;
-
 }
 
 header nav ul > li:nth-child(2){
@@ -281,41 +281,42 @@ header nav ul > li.btn-outline:hover > a {
 .pro {
     grid-area: pro;
     width: 100%;
-    height: 646px;
-    text-align: center;
+    height: 600px;
     color: #000000;
 }
 
 .pro h1 {
     font-size: 3em;
-    color: #505050;
     letter-spacing: 1.5px;
-    margin: 9% auto 0 auto;
+    text-align: center;
+    color: #505050;
+    margin: 8% auto 0 auto;
 }
 
 .pro .pro-row {
     color: #505050;
     display: flex;
-    justify-content: center;
-    margin: 6% auto;
-    width: 55%;
+    margin: 5% auto;
+    width: 100%;
 }
 
-.pro ul {
+.pro .pro-left {
+    width: 27%;
+    margin: 4% auto auto 22%;
     text-align: left;
     list-style: none;
 }
 
-.pro .pro-row p {
+.pro .pro-left p {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25em;
     letter-spacing: 0.8px;
 }
 
 .pro a {
     color: #505050;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125em;
 }
 
 .pro a.btn {
@@ -326,7 +327,7 @@ header nav ul > li.btn-outline:hover > a {
 }
 
 .pro ul > li.btn-outline {
-    width: 42%;
+    width: 43%;
     margin-top: 9.3%;
     padding: 10px 0px 10px 23px;
     border: 2px solid #505050;
@@ -350,11 +351,53 @@ header nav ul > li.btn-outline:hover > a {
     text-shadow: none;
 }
 
-.pro .pro-right ul {
-    vertical-align: middle;
-    margin-left: 20%;
+.pro .pro-right {
+    width: 43%;
+    margin-top: 3%;
+    text-align: left;
 }
 
-.pro .pro-right p {
-    font-size: 18px;
+.pro .pro-right figcaption {
+    font-size: 1.125em;
+    margin-top: 4%;
+}
+
+/* Footer */
+
+.main-footer {
+    grid-area: main-footer;
+    background-color: #eaeaea;
+    font-size: 0.75em;
+    padding: 2% 12%;
+    color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "copyright links logo";
+}
+
+.copyright {
+    grid-area: copyright;
+    text-align: left;
+    margin-left: -9%;
+}
+
+.links {
+    grid-area: links;
+    text-align: center;
+}
+
+.links ul > li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+footer ul > li > a {
+    color:#000000;
+}
+
+.logo {
+    grid-area: logo;
+    text-align: right;
+    margin-top: -1.8%;
 }
