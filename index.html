@@ -12,13 +12,17 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/animate.min.css">
-
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+        </script>
     </head>
+
     <body>
 
         <!-- Section: Hero (With Floating Navbar) -->
 
         <header class="hero">
+            <div class="container">
             <nav>
                 <ul>
                     <li><a href="index.html" class="logo"><img src="images/everwealth_white.png" alt="Everwealth"></a></li>
@@ -29,8 +33,9 @@
                     <li class="btn-outline"><a href="#">Sign Up</a></li>
                 </ul>
             </nav>
+            </div>
             <div class="hero-content">
-                <h1>Put Your Cash <br/>To Work</h1>
+                <h1 id="startchange">Put Your Cash <br/>To Work</h1>
                 <a href="#" class="btn">Try It Out</a>
                 <p>Start a nest egg for as little as $10.</p>
                 <div class="learn-more">
@@ -119,6 +124,23 @@
             </div>
 
         </footer>
-
+        <script>
+            $(document).ready(function(){
+                var scroll_start = 0;
+                var startchange = $('#startchange');
+                var offset = startchange.offset();
+                if (startchange.length){
+                    $(document).scroll(function() {
+                        scroll_start = $(this).scrollTop();
+                        if(scroll_start > offset.top) {
+                            $(".container").css('background-color', '#253449');
+                            $(".container").css('text-shadow', 'none');
+                        } else {                    $('.container').css('background-color', 'transparent');
+                            $(".container").css('0px 2px 4px #000000');
+                        }
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
