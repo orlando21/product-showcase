@@ -60,7 +60,6 @@ header nav ul .logo {
     padding: 0 20px 0 0;
     margin-left: -14%;
     width: 100%;
-    vertical-align: middle;
 }
 
 header nav ul > li {
@@ -75,7 +74,7 @@ header nav ul > li > a {
 
 header nav ul > li.btn-outline {
     width: 10%;
-    margin-top: 0.4%;
+    margin-top: 0.5%;
     padding: 11px 15px 10px 15px;
     border: 2px solid #ffffff;
     box-shadow: 0px 2px 0px 0px rgba(73,73,73,0.50);
@@ -85,14 +84,8 @@ header nav ul > li.btn-outline {
     float: right;
 }
 
-header nav ul > li:nth-child(2){
-    margin-left: 5%;
-}
-
-header nav ul > li:nth-child(3){
-    margin-left: 5%;
-}
-
+header nav ul > li:nth-child(2),
+header nav ul > li:nth-child(3),
 header nav ul > li:nth-child(4){
     margin-left: 5%;
 }
@@ -152,11 +145,6 @@ header nav ul > li.btn-outline:hover > a {
     width: 92px;
 }
 
-.hero-content .learn-more p {
-    font-size: 1em;
-    font-weight: black;
-}
-
 /* Bouncing Arrow Animation */
 
 .down-arrow {
@@ -213,13 +201,13 @@ header nav ul > li.btn-outline:hover > a {
 
 .tech .tech-row .tech-column h4 {
     font-family: Lato-Regular;
-    font-size: 28px;
+    font-size: 1.75em;
     margin: 10%;
 }
 
 .tech .tech-row .tech-column p {
     font-family: Lato-Regular;
-    font-size: 18px;
+    font-size: 1.125em;
     margin: 10% 0 0 0;
 }
 
@@ -254,22 +242,14 @@ header nav ul > li.btn-outline:hover > a {
 
 .afford .afford-row p {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5em;
     letter-spacing: 0.8px;
 }
 
-.afford a {
+.afford ul li a {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125em;
     color: #ffffff;
-}
-
-.afford a.btn {
-    margin-left: 10%;
-    background: #4BC11B;
-    padding: 10px 100px;
-    box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.50);
-    border-radius: 4px;
 }
 
 .afford ul > li.btn-outline {
@@ -340,18 +320,18 @@ header nav ul > li.btn-outline:hover > a {
     letter-spacing: 0.8px;
 }
 
-.pro a {
+.pro ul li a {
     color: #505050;
     font-weight: bold;
     font-size: 1.125em;
 }
-
+/*
 .pro a.btn {
     margin-left: 10%;
     padding: 10px 100px;
     box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.50);
     border-radius: 4px;
-}
+} */
 
 .pro ul > li.btn-outline {
     width: 43%;
@@ -427,4 +407,168 @@ footer ul > li > a {
     grid-area: logo;
     text-align: right;
     margin-top: -1.8%;
+}
+
+/* Media Queries */
+
+/* Tablets */
+
+@media (max-width:768px) {
+
+    .hero {
+        height: 700px;
+    }
+
+    .container {
+        height: 5.5%;
+        padding-top: 3%;
+        font-size: 0.8em;
+        width: 863px;
+    }
+
+    header nav {
+        margin: -5% -20% auto -20%;
+        width: 70%;
+    }
+
+    header nav ul .logo {
+        zoom: 0.8;
+        margin-top: 10%;
+        margin-left: -90%;
+        padding: 0;
+    }
+
+    header nav ul > li:nth-child(2),
+    header nav ul > li:nth-child(3),
+    header nav ul > li:nth-child(4){
+        margin-top: -1%;
+        margin-left: 3%;
+    }
+
+    header nav ul > li:nth-child(5){
+        margin-top: -1%;
+        margin: 0 0 0 13%;
+    }
+
+    header nav ul > li.btn-outline {
+        padding: 10px auto 9px auto;
+        width: 13%;
+        margin-right: -5%;
+    }
+
+    .hero-content h1 {
+        margin-top: 17%;
+        font-size: 4.5em;
+    }
+
+    .hero-content a {
+        font-size: 0.8em;
+    }
+
+    .hero-content p {
+        font-size: 0.9em;
+    }
+
+    .hero-content .learn-more {
+        margin-top: 23%;
+    }
+
+    .tech {
+        height: 450px;
+    }
+
+    .tech h1{
+        font-size: 1.8em;
+    }
+
+    .tech .tech-row .tech-column {
+        width: 210px;
+        height: 283px;
+        margin: 9.5% 5px 5px 5px;
+    }
+
+    .tech .tech-row .tech-column h4 {
+        font-size: 1em;
+    }
+
+    .tech .tech-row .tech-column p {
+        font-size: 0.9em;
+        margin: 10% 0 0 0;
+    }
+
+    .afford {
+        height: 700px;
+    }
+
+    .afford .afford-row {
+        margin: 9% auto auto 4%;
+    }
+
+    .afford .afford-row img {
+        zoom: 0.8;
+    }
+
+    .afford .afford-row h1 {
+        font-size: 2em;
+        letter-spacing: 1.2px;
+    }
+
+    .afford .afford-row p {
+        font-size: 1em;
+        letter-spacing: 0.5px;
+    }
+
+    .afford ul li a {
+        font-size: 0.8em;
+    }
+
+    .afford ul > li.btn-outline {
+        width: 53%;
+        padding: 0px 0px 0px 10px;
+    }
+
+    .afford .arrow {
+        margin-left: 1em;
+    }
+
+    .pro {
+        height: 420px;
+    }
+
+    .pro h1 {
+        font-size: 2em;
+    }
+
+    .pro .pro-left {
+        width: 35%;
+        margin: 4% 8% auto 10%;
+    }
+
+    .pro .pro-left p {
+        font-size: 1em;
+    }
+
+    .pro ul li a {
+        font-size: 0.8em;
+    }
+
+    .pro ul > li.btn-outline {
+        width: 38%;
+        padding: 8px 0px 8px 10px;
+    }
+
+    .pro .arrow {
+        margin-left: 0.8em;
+    }
+
+    .pro .pro-right img {
+        zoom: 0.8;
+    }
+
+    .pro .pro-right figcaption {
+        font-size: 1em;
+        margin-top: 2%;
+    }
+
+
 }
