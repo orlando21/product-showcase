@@ -411,7 +411,7 @@ footer ul > li > a {
 
 /* Media Queries */
 
-/* Tablets */
+/* Tablets (768px) */
 
 @media (max-width:768px) {
 
@@ -420,7 +420,7 @@ footer ul > li > a {
     }
 
     .container {
-        height: 5.5%;
+        height: 7.2%;
         padding-top: 3%;
         font-size: 0.8em;
         width: 863px;
@@ -434,7 +434,7 @@ footer ul > li > a {
     header nav ul .logo {
         zoom: 0.8;
         margin-top: 10%;
-        margin-left: -90%;
+        margin-left: -95%;
         padding: 0;
     }
 
