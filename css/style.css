@@ -49,56 +49,60 @@ a{
 }
 
 header nav {
-    display: inline-block;
-    top: 29px;
-    z-index: 100;
-    width: 82%;
-    min-height: 1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "navbar-logo navbar-links sign-in";
+    align-items: left;
+    vertical-align: bottom;
 }
 
-header nav ul .logo {
-    padding: 0 20px 0 0;
-    margin-left: -14%;
-    width: 100%;
-}
-
-header nav ul > li {
-    list-style-type: none;
-    display: inline-block;
-    margin:0 15px;
-}
-
-header nav ul > li > a {
+header nav a {
     color:#ffffff;
 }
 
-header nav ul > li.btn-outline {
-    width: 10%;
-    margin-top: 0.5%;
-    padding: 11px 15px 10px 15px;
+.navbar-logo {
+    grid-area: navbar-logo;
+    margin-left: -7%;
+}
+
+.navbar-links {
+    grid-area: navbar-links;
+    margin-top: 3%;
+}
+
+.navbar-links ul > li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 15%;
+}
+
+.sign-in {
+    grid-area: sign-in;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: -5%;
+}
+
+.sign-in ul > li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.sign-in ul > li.btn-outline {
+    width: 25%;
+    padding: 2% 4%;
+    margin-left: 5%;
     border: 2px solid #ffffff;
     box-shadow: 0px 2px 0px 0px rgba(73,73,73,0.50);
     border-radius: 4px;
-    text-align: center;
-    vertical-align: middle;
-    float: right;
 }
 
-header nav ul > li:nth-child(2),
-header nav ul > li:nth-child(3),
-header nav ul > li:nth-child(4){
-    margin-left: 5%;
-}
-
-header nav ul > li:nth-child(5){
-    margin-left: 24%;
-}
-
-header nav ul > li.btn-outline:hover {
+.sign-in ul > li.btn-outline:hover {
     background:#ffffff;
 }
 
-header nav ul > li.btn-outline:hover > a {
+.sign-in ul > li.btn-outline:hover > a {
     color:#34495e;
     text-shadow: none;
 }
@@ -325,13 +329,6 @@ header nav ul > li.btn-outline:hover > a {
     font-weight: bold;
     font-size: 1.125em;
 }
-/*
-.pro a.btn {
-    margin-left: 10%;
-    padding: 10px 100px;
-    box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.50);
-    border-radius: 4px;
-} */
 
 .pro ul > li.btn-outline {
     width: 43%;
@@ -380,7 +377,7 @@ header nav ul > li.btn-outline:hover > a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "copyright links logo";
+    grid-template-areas: "copyright footer-links footer-logo";
 }
 
 .copyright {
@@ -389,12 +386,12 @@ header nav ul > li.btn-outline:hover > a {
     margin-left: -9%;
 }
 
-.links {
-    grid-area: links;
+.footer-links {
+    grid-area: footer-links;
     text-align: center;
 }
 
-.links ul > li {
+.footer-links ul > li {
     list-style-type: none;
     display: inline-block;
 }
@@ -403,32 +400,36 @@ footer ul > li > a {
     color:#000000;
 }
 
-.logo {
-    grid-area: logo;
+.footer-logo {
+    grid-area: footer-logo;
     text-align: right;
     margin-top: -1.8%;
 }
 
 /* Media Queries */
 
+
 /* Tablets (768px) */
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
+
+    body {
+        width: 97%;
+    }
 
     .hero {
         height: 700px;
     }
 
     .container {
-        height: 7.2%;
+        height: 8.6%;
         padding-top: 3%;
         font-size: 0.8em;
-        width: 863px;
     }
 
     header nav {
         margin: -5% -20% auto -20%;
-        width: 70%;
+        width: 67.2%;
     }
 
     header nav ul .logo {
@@ -442,12 +443,12 @@ footer ul > li > a {
     header nav ul > li:nth-child(3),
     header nav ul > li:nth-child(4){
         margin-top: -1%;
-        margin-left: 3%;
+
     }
 
     header nav ul > li:nth-child(5){
         margin-top: -1%;
-        margin: 0 0 0 13%;
+        margin: 0 0 0 5%;
     }
 
     header nav ul > li.btn-outline {
@@ -459,6 +460,10 @@ footer ul > li > a {
     .hero-content h1 {
         margin-top: 17%;
         font-size: 4.5em;
+    }
+
+    #startchange {
+        color: red;
     }
 
     .hero-content a {
@@ -570,5 +575,10 @@ footer ul > li > a {
         margin-top: 2%;
     }
 
+}
+
+/* Small Laptops (992px) */
+
+@media (max-width: 992px) {
 
 }
