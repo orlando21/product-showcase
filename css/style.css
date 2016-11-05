@@ -107,6 +107,31 @@ header nav a {
     text-shadow: none;
 }
 
+#responsive-menu {
+    display: none;
+}
+
+.hamburger {
+    background: none;
+    line-height: 55px;
+    color: #ffffff;
+    border: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cross {
+    background: none;
+    line-height: 55px;
+    color: #ffffff;
+    padding-top: 4px;
+    padding-bottom: -4px;
+    border: 0;
+    font-size: 3.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* Hero Content */
 
 .hero-content h1 {
@@ -417,44 +442,79 @@ footer ul > li > a {
         width: 97%;
     }
 
+    .container {
+        height: 7.5%;
+    }
+
     .hero {
         height: 700px;
     }
 
     .container {
-        height: 8.6%;
-        padding-top: 3%;
-        font-size: 0.8em;
+        font-size: 1em;
     }
 
-    header nav {
-        margin: -5% -20% auto -20%;
-        width: 67.2%;
+    .sign-in {
+        margin-top: -2.5%;
+        margin-left: 20%;
     }
 
-    header nav ul .logo {
+    .navbar-logo {
         zoom: 0.8;
-        margin-top: 10%;
-        margin-left: -95%;
-        padding: 0;
+        margin-left: 18%;
     }
 
-    header nav ul > li:nth-child(2),
-    header nav ul > li:nth-child(3),
-    header nav ul > li:nth-child(4){
-        margin-top: -1%;
-
+    #links-visible {
+        display: none;
     }
 
-    header nav ul > li:nth-child(5){
-        margin-top: -1%;
-        margin: 0 0 0 5%;
+    #signin-visible {
+        display: none;
     }
 
-    header nav ul > li.btn-outline {
-        padding: 10px auto 9px auto;
-        width: 13%;
-        margin-right: -5%;
+    #responsive-menu {
+        display: block;
+    }
+
+    .dropdown {
+        font-weight: bold;
+        font-size: 1em;
+        background: #253449;
+        text-align: left;
+        width: 100%;
+        color: #ffffff;
+    }
+
+    .dropdown ul {
+        list-style-type: none;
+    }
+
+    .dropdown li {
+        position: relative;
+        width: 100%;
+        text-decoration: none;
+        padding: 15px 10% 15px 10%;
+        border-bottom: #1d1f20 1px solid;
+    }
+
+    .dropdown ul li a {
+        display: block;
+    }
+
+    .dropdown .arrow {
+        display: inline-block;
+        font-size: 1.1em;
+        vertical-align: top;
+        float: right;
+    }
+
+    .dropdown li:hover {
+        background:#ffffff;
+    }
+
+    .dropdown li:hover > a {
+        color: #505050;
+        text-shadow: none;
     }
 
     .hero-content h1 {

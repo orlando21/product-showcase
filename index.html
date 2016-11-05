@@ -23,24 +23,38 @@
 
         <header class="hero">
             <div class="container">
-            <nav>
-                <div class="navbar-logo">
-                    <a href="index.html"><img src="images/everwealth_white.png" alt="Everwealth"></a>
-                </div>
-                <div class="navbar-links">
-                    <ul>
-                        <li><a href="#">Why Invest?</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Fees</a></li>
-                    </ul>
-                </div>
-                <div class="sign-in">
-                    <ul>
-                        <li><a href="#">Sign In</a></li>
-                        <li class="btn-outline"><a href="#">Sign Up</a></li>
-                    </ul>
-                </div>
-            </nav>
+                <nav>
+                    <div class="navbar-logo">
+                        <a href="index.html"><img src="images/everwealth_white.png" alt="Everwealth"></a>
+                    </div>
+                    <div id="links-visible" class="navbar-links">
+                        <ul>
+                            <li><a href="#">Why Invest?</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Fees</a></li>
+                        </ul>
+                    </div>
+                    <div class="sign-in">
+                        <ul id="signin-visible">
+                            <li><a href="#">Sign In</a></li>
+                            <li class="btn-outline"><a href="#">Sign Up</a></li>
+                        </ul>
+                        <div id="responsive-menu">
+                            <button class="hamburger">&#9776;</button>
+                            <button class="cross">&#735;</button>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="#">Why Invest?<span class="arrow">&#x3009;</span></a></li>
+                                    <li><a href="#">About Us<span class="arrow">&#x3009;</span></a></li>
+                                    <li><a href="#">Fees<span class="arrow">&#x3009;</span></a></li>
+                                    <li><a href="#">Sign In<span class="arrow">&#x3009;</span></a></li>
+                                    <li><a href="#">Sign Up<span class="arrow">&#x3009;</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
             </div>
             <div class="hero-content">
                 <h1 id="startchange">Put Your Cash <br/>To Work</h1>
@@ -132,6 +146,8 @@
 
         </footer>
         <script>
+
+            // Change Background Color Floating Navbar
             $(document).ready(function(){
                 var scroll_start = 0;
                 var startchange = $('#startchange');
@@ -147,6 +163,24 @@
                         }
                     });
                 }
+            });
+
+            // Toggle Dropdown Menu
+            $( ".cross" ).hide();
+            $( ".dropdown" ).hide();
+
+            $( ".hamburger" ).click(function() {
+                $( ".dropdown" ).slideToggle(function() {
+                    $( ".hamburger" ).hide();
+                    $( ".cross" ).show();
+                });
+            });
+
+            $( ".cross" ).click(function() {
+                $( ".dropdown" ).slideToggle(function() {
+                    $( ".cross" ).hide();
+                    $( ".hamburger" ).show();
+                });
             });
         </script>
     </body>
