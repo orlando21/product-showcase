@@ -111,27 +111,6 @@ header nav a {
     display: none;
 }
 
-.hamburger {
-    background: none;
-    line-height: 55px;
-    color: #ffffff;
-    border: 0;
-    font-size: 1.4em;
-    font-weight: bold;
-    cursor: pointer;
-}
-.cross {
-    background: none;
-    line-height: 55px;
-    color: #ffffff;
-    padding-top: 4px;
-    padding-bottom: -4px;
-    border: 0;
-    font-size: 3.5em;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 /* Hero Content */
 
 .hero-content h1 {
@@ -433,35 +412,28 @@ footer ul > li > a {
 
 /* Media Queries */
 
+/* Mobile Phones (320px) */
 
-/* Tablets (768px) */
-
-@media (max-width: 768px) {
+@media (max-width: 320px) {
 
     body {
-        width: 97%;
-    }
-
-    .container {
-        height: 7.5%;
+        width: 320px;
     }
 
     .hero {
-        height: 700px;
+
     }
+
+
 
     .container {
-        font-size: 1em;
-    }
-
-    .sign-in {
-        margin-top: -2.5%;
-        margin-left: 20%;
+        height: 8.5%;
     }
 
     .navbar-logo {
-        zoom: 0.8;
-        margin-left: 18%;
+        zoom: 0.7;
+        margin-top: 3%;
+        margin-left: 5%;
     }
 
     #links-visible {
@@ -474,15 +446,36 @@ footer ul > li > a {
 
     #responsive-menu {
         display: block;
+        margin: 1% 0 0 33%;
+    }
+
+    .hamburger {
+        background: none;
+        line-height: 35px;
+        color: #ffffff;
+        border: 0;
+        font-size: 1.4em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .cross {
+        background: none;
+        line-height: 45px;
+        color: #ffffff;
+        border: 0;
+        font-size: 3.5em;
+        font-weight: bold;
+        cursor: pointer;
     }
 
     .dropdown {
         font-weight: bold;
-        font-size: 1em;
+        font-size: 0.8em;
         background: #253449;
         text-align: left;
         width: 100%;
         color: #ffffff;
+        margin-top: 2.1%;
     }
 
     .dropdown ul {
@@ -518,24 +511,26 @@ footer ul > li > a {
     }
 
     .hero-content h1 {
-        margin-top: 17%;
+        margin-top: 18%;
         font-size: 4.5em;
-    }
-
-    #startchange {
-        color: red;
     }
 
     .hero-content a {
         font-size: 0.8em;
     }
 
+    .hero-content a.btn {
+        margin-left: 10%;
+        padding: 10px 60px;
+    }
+
     .hero-content p {
+        margin-top: 7%;
         font-size: 0.9em;
     }
 
     .hero-content .learn-more {
-        margin-top: 23%;
+        margin-top: 18%;
     }
 
     .tech {
@@ -543,7 +538,7 @@ footer ul > li > a {
     }
 
     .tech h1{
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .tech .tech-row .tech-column {
@@ -562,11 +557,11 @@ footer ul > li > a {
     }
 
     .afford {
-        height: 700px;
+        height: 680px;
     }
 
     .afford .afford-row {
-        margin: 9% auto auto 4%;
+        margin: 8% auto auto 4%;
     }
 
     .afford .afford-row img {
@@ -589,7 +584,227 @@ footer ul > li > a {
 
     .afford ul > li.btn-outline {
         width: 53%;
-        padding: 0px 0px 0px 10px;
+        padding: 5px 0px 5px 10px;
+    }
+
+    .afford .arrow {
+        margin-left: 1em;
+    }
+
+    .pro {
+        height: 420px;
+    }
+
+    .pro h1 {
+        font-size: 2em;
+    }
+
+    .pro .pro-left {
+        width: 35%;
+        margin: 4% 8% auto 10%;
+    }
+
+    .pro .pro-left p {
+        font-size: 1em;
+    }
+
+    .pro ul li a {
+        font-size: 0.8em;
+    }
+
+    .pro ul > li.btn-outline {
+        width: 38%;
+        padding: 8px 0px 8px 10px;
+    }
+
+    .pro .arrow {
+        margin-left: 0.8em;
+    }
+
+    .pro .pro-right img {
+        zoom: 0.8;
+    }
+
+    .pro .pro-right figcaption {
+        font-size: 1em;
+        margin-top: 2%;
+    }
+
+
+}
+
+
+/* Tablets (768px) */
+
+@media (min-width: 321px) and (max-width: 768px) {
+
+    body {
+        width: 97%;
+    }
+
+    .hero {
+        height: 700px;
+    }
+
+    .container {
+        height: 8.5%;
+    }
+
+    .navbar-logo {
+        zoom: 0.8;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+
+    #links-visible {
+        display: none;
+    }
+
+    #signin-visible {
+        display: none;
+    }
+
+    #responsive-menu {
+        display: block;
+        margin: 1% 0 0 33%;
+    }
+
+    .hamburger {
+        background: none;
+        line-height: 35px;
+        color: #ffffff;
+        border: 0;
+        font-size: 1.4em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .cross {
+        background: none;
+        line-height: 45px;
+        color: #ffffff;
+        border: 0;
+        font-size: 3.5em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        font-weight: bold;
+        font-size: 0.8em;
+        background: #253449;
+        text-align: left;
+        width: 100%;
+        color: #ffffff;
+        margin-top: 2.1%;
+    }
+
+    .dropdown ul {
+        list-style-type: none;
+    }
+
+    .dropdown li {
+        position: relative;
+        width: 100%;
+        text-decoration: none;
+        padding: 15px 10% 15px 10%;
+        border-bottom: #1d1f20 1px solid;
+    }
+
+    .dropdown ul li a {
+        display: block;
+    }
+
+    .dropdown .arrow {
+        display: inline-block;
+        font-size: 1.1em;
+        vertical-align: top;
+        float: right;
+    }
+
+    .dropdown li:hover {
+        background:#ffffff;
+    }
+
+    .dropdown li:hover > a {
+        color: #505050;
+        text-shadow: none;
+    }
+
+    .hero-content h1 {
+        margin-top: 18%;
+        font-size: 4.5em;
+    }
+
+    .hero-content a {
+        font-size: 0.8em;
+    }
+
+    .hero-content a.btn {
+        margin-left: 10%;
+        padding: 10px 60px;
+    }
+
+    .hero-content p {
+        margin-top: 7%;
+        font-size: 0.9em;
+    }
+
+    .hero-content .learn-more {
+        margin-top: 18%;
+    }
+
+    .tech {
+        height: 450px;
+    }
+
+    .tech h1{
+        font-size: 2em;
+    }
+
+    .tech .tech-row .tech-column {
+        width: 210px;
+        height: 283px;
+        margin: 9.5% 5px 5px 5px;
+    }
+
+    .tech .tech-row .tech-column h4 {
+        font-size: 1em;
+    }
+
+    .tech .tech-row .tech-column p {
+        font-size: 0.9em;
+        margin: 10% 0 0 0;
+    }
+
+    .afford {
+        height: 680px;
+    }
+
+    .afford .afford-row {
+        margin: 8% auto auto 4%;
+    }
+
+    .afford .afford-row img {
+        zoom: 0.8;
+    }
+
+    .afford .afford-row h1 {
+        font-size: 2em;
+        letter-spacing: 1.2px;
+    }
+
+    .afford .afford-row p {
+        font-size: 1em;
+        letter-spacing: 0.5px;
+    }
+
+    .afford ul li a {
+        font-size: 0.8em;
+    }
+
+    .afford ul > li.btn-outline {
+        width: 53%;
+        padding: 5px 0px 5px 10px;
     }
 
     .afford .arrow {
@@ -639,6 +854,139 @@ footer ul > li > a {
 
 /* Small Laptops (992px) */
 
-@media (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 992px) {
+
+    .hero {
+        height: 775px;
+    }
+
+    .container {
+        height: 9.8%;
+        font-size: 1em;
+    }
+
+    .navbar-logo {
+        margin-left: 7.9%;
+    }
+
+    .navbar-links {
+        margin: 5.4% -5% 0 -5%;
+    }
+
+    .sign-in {
+        margin: 3.1% 5% 0 -10%;
+    }
+
+
+    .hero-content h1 {
+        margin-top: 14%;
+        font-size: 5.5em;
+    }
+
+    .hero-content a.btn {
+        margin-left: 10%;
+        padding: 10px 90px;
+    }
+
+    .hero-content p {
+        margin-top: 7%;
+        font-size: 1.1em;
+    }
+
+    .hero-content .learn-more {
+        margin-top: 21%;
+    }
+
+    .tech {
+        height: 530px;
+    }
+
+    .tech h1{
+        font-size: 2.5em;
+    }
+
+    .tech .tech-row .tech-column {
+        width: 270px;
+        height: 283px;
+        margin: 9.5% 5px 5px 5px;
+    }
+
+    .tech .tech-row .tech-column h4 {
+        font-size: 1.5em;
+        margin: 10%;
+    }
+
+    .tech .tech-row .tech-column p {
+        font-size: 1.1em;
+    }
+
+    .afford {
+        height: 780px;
+    }
+
+    .afford .afford-row {
+        margin: 9% auto auto 2%;
+    }
+
+    .afford .afford-row img {
+        zoom: 0.9;
+    }
+
+    .afford .afford-row h1 {
+        font-size: 2.5em;
+        letter-spacing: 1.3px;
+    }
+
+    .afford .afford-row p {
+        font-size: 1.2em;
+        letter-spacing: 0.7px;
+    }
+
+    .afford ul li a {
+        font-size: 1em;
+    }
+
+    .afford ul > li.btn-outline {
+        width: 60%;
+        padding: 10px 0px 10px 25px;
+    }
+
+    .pro {
+        height: 530px;
+    }
+
+    .pro h1 {
+        font-size: 2.5em;
+    }
+
+    .pro .pro-left {
+        width: 40%;
+        margin: 4% auto auto 10%;
+    }
+
+    .pro .pro-left p {
+        font-size: 1.2em;
+    }
+
+    .pro ul li a {
+        font-size: 1.1em;
+    }
+
+    .pro ul > li.btn-outline {
+        width: 40%;
+        margin-top: 8%;
+        padding: 8px 0px 8px 15px;
+
+    }
+
+    .pro .pro-right img {
+        zoom: 0.9;
+    }
+
+    .pro .pro-right figcaption {
+        font-size: 1.1em;
+        margin-top:3%;
+    }
+
 
 }
