@@ -6,9 +6,8 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas: "hero"
                          "tech"
@@ -183,40 +182,41 @@ header nav a {
 
 .tech {
     grid-area: tech;
-    width: 100%;
-    height: 650px;
-    text-align: center;
+    height: 600px;
 }
 
 .tech h1{
     font-size: 3em;
     color: #505050;
-    margin: 9% auto 0 auto;
+    margin: 9% auto 8% auto;
+    text-align: center;
 }
 
 .tech .tech-row {
-    display:flex;
+    display: flex;
     justify-content: center;
     margin: 0 auto;
 }
 
 .tech .tech-row .tech-column {
     color: #505050;
-    width: 361px;
-    height: 283px;
-    margin: 9.5% 5px 5px 5px;
+    text-align: center;
+    width: 33.33%;
+}
+
+.tech .tech-row .tech-column img {
+    width: 20%;
+    margin: 0 10%;
 }
 
 .tech .tech-row .tech-column h4 {
-    font-family: Lato-Regular;
     font-size: 1.75em;
-    margin: 10%;
+    margin: 10% 0;
 }
 
 .tech .tech-row .tech-column p {
-    font-family: Lato-Regular;
     font-size: 1.125em;
-    margin: 10% 0 0 0;
+    margin: 10% 10%;
 }
 
 /* Section: Affordable */
@@ -374,6 +374,7 @@ header nav a {
 
 .main-footer {
     grid-area: main-footer;
+    width: 100%;
     background-color: #eaeaea;
     font-size: 0.75em;
     padding: 2% 12%;
@@ -414,26 +415,27 @@ footer ul > li > a {
 
 /* Mobile Phones (320px) */
 
-@media (max-width: 320px) {
-
-    body {
-        width: 320px;
-    }
+@media (max-width: 400px) {
 
     .hero {
-
+        height: 400px;
     }
 
-
-
     .container {
-        height: 8.5%;
+        height: 10%;
+    }
+
+    header nav {
+        width: 80%
+        /* Fake properties */
+        border-width: 1px;
+        border-color: black;
     }
 
     .navbar-logo {
         zoom: 0.7;
         margin-top: 3%;
-        margin-left: 5%;
+        margin-left: 20%;
     }
 
     #links-visible {
@@ -446,7 +448,9 @@ footer ul > li > a {
 
     #responsive-menu {
         display: block;
-        margin: 1% 0 0 33%;
+        float: right;
+        margin-top: 1.5%;
+        margin-right: 20%;
     }
 
     .hamburger {
@@ -454,28 +458,29 @@ footer ul > li > a {
         line-height: 35px;
         color: #ffffff;
         border: 0;
-        font-size: 1.4em;
+        font-size: 1em;
         font-weight: bold;
         cursor: pointer;
+        float: right;
     }
     .cross {
         background: none;
         line-height: 45px;
         color: #ffffff;
         border: 0;
-        font-size: 3.5em;
+        font-size: 2.3em;
         font-weight: bold;
         cursor: pointer;
+        float: right;
     }
 
     .dropdown {
         font-weight: bold;
-        font-size: 0.8em;
+        font-size: 0.5em;
         background: #253449;
         text-align: left;
         width: 100%;
         color: #ffffff;
-        margin-top: 2.1%;
     }
 
     .dropdown ul {
@@ -511,80 +516,106 @@ footer ul > li > a {
     }
 
     .hero-content h1 {
-        margin-top: 18%;
-        font-size: 4.5em;
+        margin-top: 30%;
+        font-size: 3em;
     }
 
     .hero-content a {
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
 
     .hero-content a.btn {
         margin-left: 10%;
-        padding: 10px 60px;
+        padding: 8px 40px;
     }
 
     .hero-content p {
         margin-top: 7%;
-        font-size: 0.9em;
+        font-size: 0.6em;
     }
 
     .hero-content .learn-more {
-        margin-top: 18%;
+        display: none;
     }
 
     .tech {
-        height: 450px;
+        height: 480px;
     }
 
     .tech h1{
-        font-size: 2em;
+        width: 320px;
+        font-size: 1.4em;
+        margin: 9% 0 2% 0;
+    }
+
+    .tech .tech-row {
+        flex-wrap: wrap;
+        margin-top: 5%;
     }
 
     .tech .tech-row .tech-column {
-        width: 210px;
-        height: 283px;
-        margin: 9.5% 5px 5px 5px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -5%;
+        margin-left: 5%;
+    }
+
+    .tech .tech-row .tech-column * {
+        width: 50%;
+    }
+
+    .tech .tech-row .tech-column img {
+        width: 15%;
+        margin: 0 10% 0 9%;
     }
 
     .tech .tech-row .tech-column h4 {
-        font-size: 1em;
+        text-align: left;
+        font-size: 0.9em;
+        margin: 13% 0 0 -2%;
     }
 
     .tech .tech-row .tech-column p {
-        font-size: 0.9em;
-        margin: 10% 0 0 0;
+        text-align: left;
+        font-size: 0.8em;
+        margin: -25% 0 0 32%;
     }
 
     .afford {
-        height: 680px;
+        height: 260px;
     }
 
     .afford .afford-row {
-        margin: 8% auto auto 4%;
+        margin: 8% auto auto 0;
+        width: 90%;
     }
 
     .afford .afford-row img {
-        zoom: 0.8;
+        zoom: 0.3;
+    }
+
+    .afford .afford-row ul {
+        margin: -2% auto auto 15%;
     }
 
     .afford .afford-row h1 {
-        font-size: 2em;
-        letter-spacing: 1.2px;
+        font-size: 1.1em;
+        letter-spacing: 1px;
     }
 
     .afford .afford-row p {
-        font-size: 1em;
-        letter-spacing: 0.5px;
+        font-size: 0.7em;
+        letter-spacing: 0.7px;
     }
 
     .afford ul li a {
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
 
     .afford ul > li.btn-outline {
-        width: 53%;
-        padding: 5px 0px 5px 10px;
+        width: 90%;
+        padding: 0 0px 5px 10px;
     }
 
     .afford .arrow {
@@ -592,58 +623,96 @@ footer ul > li > a {
     }
 
     .pro {
-        height: 420px;
+        height: 380px;
     }
 
     .pro h1 {
-        font-size: 2em;
+        font-size: 1.4em;
+        width: 320px;
+        margin-left: 0;
+    }
+
+    .pro .pro-row {
+        display: block;
     }
 
     .pro .pro-left {
-        width: 35%;
-        margin: 4% 8% auto 10%;
+        width: 100%;
+        margin: 10% 8% 5% 0;
+        text-align: center;
     }
 
     .pro .pro-left p {
-        font-size: 1em;
-    }
-
-    .pro ul li a {
         font-size: 0.8em;
     }
 
+    .pro ul li a {
+        font-size: 0.7em;
+    }
+
     .pro ul > li.btn-outline {
-        width: 38%;
-        padding: 8px 0px 8px 10px;
+        width: 30%;
+        margin-top: 5%;
+        margin-left: 35%;
+        padding: 4px 0px 4px 8px;
     }
 
     .pro .arrow {
         margin-left: 0.8em;
     }
 
+    .pro .pro-right {
+        width: 100%;
+        margin-top: 10%;
+        text-align: center;
+    }
+
     .pro .pro-right img {
-        zoom: 0.8;
+        zoom: 0.5;
     }
 
     .pro .pro-right figcaption {
-        font-size: 1em;
+        font-size: 0.8em;
         margin-top: 2%;
     }
 
+    .main-footer {
+        padding: 5% 0 5% 0;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "copyright"
+                             "footer-links"
+                             "footer-logo";
+    }
+
+    .copyright {
+        text-align: center;
+        margin: auto auto 2% auto;
+    }
+
+    .footer-links {
+        margin-bottom: 2%;
+    }
+
+    .footer-links ul > li {
+        list-style-type: none;
+    }
+
+    .footer-logo {
+        zoom: 0.8;
+        margin-top: 1%;
+        text-align: center;
+    }
 
 }
 
 
 /* Tablets (768px) */
 
-@media (min-width: 321px) and (max-width: 768px) {
-
-    body {
-        width: 97%;
-    }
+@media (min-width: 401px) and (max-width: 768px) {
 
     .hero {
-        height: 700px;
+        height: 550px;
     }
 
     .container {
@@ -750,10 +819,11 @@ footer ul > li > a {
     }
 
     .hero-content .learn-more {
-        margin-top: 18%;
+        margin-top: 7%;
     }
 
     .tech {
+        width: 100%;
         height: 450px;
     }
 
@@ -761,18 +831,24 @@ footer ul > li > a {
         font-size: 2em;
     }
 
+    .tech .tech-row {
+        margin-top: -5%;
+    }
+
     .tech .tech-row .tech-column {
-        width: 210px;
-        height: 283px;
         margin: 9.5% 5px 5px 5px;
     }
 
+    .tech .tech-row .tech-column img {
+        width: 40%;
+    }
+
     .tech .tech-row .tech-column h4 {
-        font-size: 1em;
+        font-size: 1.4em;
     }
 
     .tech .tech-row .tech-column p {
-        font-size: 0.9em;
+        font-size: 1em;
         margin: 10% 0 0 0;
     }
 
@@ -833,7 +909,7 @@ footer ul > li > a {
     }
 
     .pro ul > li.btn-outline {
-        width: 38%;
+        width: 45%;
         padding: 8px 0px 8px 10px;
     }
 
@@ -848,6 +924,10 @@ footer ul > li > a {
     .pro .pro-right figcaption {
         font-size: 1em;
         margin-top: 2%;
+    }
+
+    .main-footer {
+        width: 100%
     }
 
 }
@@ -857,7 +937,7 @@ footer ul > li > a {
 @media (min-width: 769px) and (max-width: 992px) {
 
     .hero {
-        height: 775px;
+        height: 725px;
     }
 
     .container {
@@ -894,7 +974,7 @@ footer ul > li > a {
     }
 
     .hero-content .learn-more {
-        margin-top: 21%;
+        margin-top: 16%;
     }
 
     .tech {
@@ -905,10 +985,18 @@ footer ul > li > a {
         font-size: 2.5em;
     }
 
+    .tech .tech-row {
+        margin-top: -5%;
+    }
+
     .tech .tech-row .tech-column {
         width: 270px;
         height: 283px;
         margin: 9.5% 5px 5px 5px;
+    }
+
+    .tech .tech-row .tech-column img {
+        width: 38%;
     }
 
     .tech .tech-row .tech-column h4 {
@@ -917,7 +1005,7 @@ footer ul > li > a {
     }
 
     .tech .tech-row .tech-column p {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     .afford {
