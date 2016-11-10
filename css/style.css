@@ -9,25 +9,46 @@ body {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
+    height: 100vh;
+}
+
+.index {
     grid-template-areas: "hero"
                          "tech"
                          "afford"
                          "pro"
                          "main-footer";
-    height: 100vh;
+}
+
+.fees {
+    grid-template-areas: "top"
+                         "growth"
+                         "get"
+                         "main-footer";
 }
 
 a{
     text-decoration: none;
 }
 
-/* Header: Hero */
+/* Headers: Hero (Index.html) */
 
 .hero {
     grid-area: hero;
     background-image: url('../images/people-working.jpg');
     width: 100%;
     height: 928px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Headers: Top (Fees.html) */
+
+.top {
+    grid-area: top;
+    background-image: url('../images/stacked-coins.jpg');
+    width: 100%;
+    height: 817px;
     background-size: cover;
     background-position: center;
 }
@@ -151,6 +172,41 @@ header nav a {
     margin: 16% auto 0 auto;
     width: 92px;
 }
+
+/* Top Content */
+
+.top-content h1 {
+    margin-top: 13%;
+    margin-left: 9.5%;
+    font-family: Lato-Black;
+    font-size: 5.5em;
+    color: #ffffff;
+    letter-spacing: 3.29px;
+    text-shadow: 0px 2px 4px #4A4A4A;
+}
+
+.top-content .quote {
+    width: 30%;
+    margin-top: 15%;
+    margin-left: 9.5%;
+}
+
+.top-content .quote > p {
+    font-size: 22px;
+    color: #FFFFFF;
+    letter-spacing: auto;
+    line-height: 22px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+}
+
+.top-content .quote > p.statement {
+    letter-spacing: 1.5px;
+}
+
+.top-content .quote > p.title {
+    margin-left: 3%;
+}
+
 
 /* Bouncing Arrow Animation */
 
@@ -422,7 +478,7 @@ footer ul > li > a {
     }
 
     .container {
-        height: 10%;
+        height: 7%;
     }
 
     header nav {
@@ -517,7 +573,8 @@ footer ul > li > a {
 
     .hero-content h1 {
         margin-top: 30%;
-        font-size: 3em;
+        margin-left: 6%;
+        font-size: 2.8em;
     }
 
     .hero-content a {
@@ -525,12 +582,13 @@ footer ul > li > a {
     }
 
     .hero-content a.btn {
-        margin-left: 10%;
+        margin-left: 6%;
         padding: 8px 40px;
     }
 
     .hero-content p {
         margin-top: 7%;
+        margin-left: 6%;
         font-size: 0.6em;
     }
 
@@ -539,18 +597,19 @@ footer ul > li > a {
     }
 
     .tech {
-        height: 480px;
+        height: 400px;
     }
 
     .tech h1{
         width: 320px;
         font-size: 1.4em;
-        margin: 9% 0 2% 0;
+        margin: 10% 0 2% 0;
+        width: 100%;
     }
 
     .tech .tech-row {
         flex-wrap: wrap;
-        margin-top: 5%;
+        margin-top: 12%;
     }
 
     .tech .tech-row .tech-column {
@@ -562,24 +621,24 @@ footer ul > li > a {
     }
 
     .tech .tech-row .tech-column * {
-        width: 50%;
+        width: 65%;
     }
 
     .tech .tech-row .tech-column img {
         width: 15%;
-        margin: 0 10% 0 9%;
+        margin: -5% 10% 0 2%;
     }
 
     .tech .tech-row .tech-column h4 {
         text-align: left;
         font-size: 0.9em;
-        margin: 13% 0 0 -2%;
+        margin: 5% 0 0 -2%;
     }
 
     .tech .tech-row .tech-column p {
         text-align: left;
         font-size: 0.8em;
-        margin: -25% 0 0 32%;
+        margin: -20% 0 0 25%;
     }
 
     .afford {
@@ -614,7 +673,7 @@ footer ul > li > a {
     }
 
     .afford ul > li.btn-outline {
-        width: 90%;
+        width: 70%;
         padding: 0 0px 5px 10px;
     }
 
@@ -628,7 +687,7 @@ footer ul > li > a {
 
     .pro h1 {
         font-size: 1.4em;
-        width: 320px;
+        width: 100%;
         margin-left: 0;
     }
 
@@ -801,6 +860,7 @@ footer ul > li > a {
 
     .hero-content h1 {
         margin-top: 18%;
+        margin-left: 9%;
         font-size: 4.5em;
     }
 
@@ -809,12 +869,13 @@ footer ul > li > a {
     }
 
     .hero-content a.btn {
-        margin-left: 10%;
+        margin-left: 9%;
         padding: 10px 60px;
     }
 
     .hero-content p {
         margin-top: 7%;
+        margin-left: 9%;
         font-size: 0.9em;
     }
 
@@ -937,15 +998,16 @@ footer ul > li > a {
 @media (min-width: 769px) and (max-width: 992px) {
 
     .hero {
-        height: 725px;
+        height: 700px;
     }
 
     .container {
         height: 9.8%;
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
     .navbar-logo {
+        zoom: 0.8;
         margin-left: 7.9%;
     }
 
@@ -957,6 +1019,9 @@ footer ul > li > a {
         margin: 3.1% 5% 0 -10%;
     }
 
+    .sign-in ul > li.btn-outline {
+        width: 30%;
+    }
 
     .hero-content h1 {
         margin-top: 14%;
@@ -974,7 +1039,7 @@ footer ul > li > a {
     }
 
     .hero-content .learn-more {
-        margin-top: 16%;
+        margin-top: 14%;
     }
 
     .tech {
@@ -1049,7 +1114,7 @@ footer ul > li > a {
 
     .pro .pro-left {
         width: 40%;
-        margin: 4% auto auto 10%;
+        margin: 4% 8% auto 6%;
     }
 
     .pro .pro-left p {
@@ -1061,14 +1126,13 @@ footer ul > li > a {
     }
 
     .pro ul > li.btn-outline {
-        width: 40%;
+        width: 50%;
         margin-top: 8%;
         padding: 8px 0px 8px 15px;
-
     }
 
     .pro .pro-right img {
-        zoom: 0.9;
+        zoom: 0.8;
     }
 
     .pro .pro-right figcaption {
