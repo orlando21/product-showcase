@@ -31,7 +31,7 @@ a{
     text-decoration: none;
 }
 
-/* Headers: Hero (Index.html) */
+/* Header: Hero */
 
 .hero {
     grid-area: hero;
@@ -42,7 +42,7 @@ a{
     background-position: center;
 }
 
-/* Headers: Top (Fees.html) */
+/* Header: Top (Fees Page) */
 
 .top {
     grid-area: top;
@@ -58,14 +58,14 @@ a{
 .container {
     position: fixed;
     width: 100%;
-    height: 10.8%;
+    height: 9.5%;
     z-index: 9999;
     text-align: center;
     padding-top: 1%;
     background-color: transparent;
     text-shadow: 0px 2px 4px #000000;
+    font-size: 0.9em;
     font-weight: bold;
-    font-size: 1.125em;
 }
 
 header nav {
@@ -110,7 +110,7 @@ header nav a {
 }
 
 .sign-in ul > li.btn-outline {
-    width: 25%;
+    width: 23%;
     padding: 2% 4%;
     margin-left: 5%;
     border: 2px solid #ffffff;
@@ -170,10 +170,9 @@ header nav a {
     display: flex;
     justify-content: center;
     margin: 16% auto 0 auto;
-    width: 92px;
 }
 
-/* Top Content */
+/* Top Content (Fees Page) */
 
 .top-content h1 {
     margin-top: 13%;
@@ -192,7 +191,6 @@ header nav a {
 }
 
 .top-content .quote > p {
-    font-size: 22px;
     color: #FFFFFF;
     letter-spacing: auto;
     line-height: 22px;
@@ -200,11 +198,14 @@ header nav a {
 }
 
 .top-content .quote > p.statement {
+    font-size: 1.2em;
     letter-spacing: 1.5px;
 }
 
 .top-content .quote > p.title {
-    margin-left: 3%;
+    font-size: 1em;
+    padding-top: 0.1%;
+    padding-left: 2%;
 }
 
 
@@ -274,6 +275,59 @@ header nav a {
     font-size: 1.125em;
     margin: 10% 10%;
 }
+
+/* Section: Maximize Growth (Fees Page) */
+
+.growth {
+    grid-area: growth;
+    height: 500px;
+    font-weight: bold;
+    font-size: 1.25em;
+    letter-spacing: 0.8px;
+    color: #505050;
+}
+
+.growth h1{
+    font-size: 3em;
+    margin: 6% auto 6% auto;
+    text-align: center;
+}
+
+.growth .lead {
+    width: 45%;
+    margin: 0 auto 6% auto;
+    align-content: center;
+}
+
+.growth .lead > p {
+    text-align: center;
+}
+
+.growth .growth-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.growth .growth-row .growth-column {
+    text-align: left;
+    width: 50%;
+}
+
+.growth .growth-row .growth-column ul.checkbullet {
+    list-style-image: url("../images/checkbullet.png");
+    width: 50%;
+    margin: auto;
+}
+
+.growth .growth-row .growth-column ul li {
+    padding: 1% 0;
+}
+
+.growth .growth-row .growth-column .bullettext {
+    padding-left: 0.5%;
+}
+
 
 /* Section: Affordable */
 
@@ -424,6 +478,64 @@ header nav a {
 .pro .pro-right figcaption {
     font-size: 1.125em;
     margin-top: 4%;
+}
+
+/* Section: What You Get (Fees Page) */
+
+.get {
+    grid-area: get;
+    color: #ffffff;
+    height: 700px;
+    background-image: linear-gradient(-90deg, #698C2A 0%, #74BB36 1%, #429321 100%);
+    display: flex;
+    align-items: center;
+}
+
+.get .get-wrapper {
+    margin: 9% auto 8% auto;
+}
+
+.get .get-wrapper h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+.get .get-row {
+    display: flex;
+    justify-content: center;
+    margin: 10% auto 0 auto;
+}
+
+.get .get-row .get-column {
+    text-align: center;
+    width: 33.33%;
+}
+
+.get .get-row .get-column .mask {
+    background: #ffffff;
+    width: 221px;
+    height: 221px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000000;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.get .get-row .get-column .mask .re-align {
+    margin-top: 20%;
+}
+
+.get .get-row .get-column img {
+    display: inline;
+    height: 100%;
+    width: auto;
+}
+
+.get .get-row .get-column p {
+    font-size: 1.125em;
+    margin: 10% 10%;
 }
 
 /* Footer */
@@ -1003,7 +1115,6 @@ footer ul > li > a {
 
     .container {
         height: 9.8%;
-        font-size: 0.8em;
     }
 
     .navbar-logo {
@@ -1039,7 +1150,7 @@ footer ul > li > a {
     }
 
     .hero-content .learn-more {
-        margin-top: 14%;
+        padding-top: 5px;
     }
 
     .tech {
